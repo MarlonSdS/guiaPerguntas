@@ -2,17 +2,17 @@ const express = require("express");
 const app = express();
 
 app.set("view engine", "ejs");
+app.use(express.static('public'));
 
 app.get("/", (req, res) => {
-    res.render("index");
-})
-
-app.get("/home", (req, res) => {
-    res.render("home");
-})
-
-app.get("/profile", (req, res) => {
-    res.render("main/profile");
+    var nome = "Marlon Santos";
+    var lang = "Javascript";
+    var exibirMsg = false;
+    res.render("index", {
+        nome: nome,
+        lang: lang,
+        msg: exibirMsg
+    });
 })
 
 app.listen(8080, ()=>{

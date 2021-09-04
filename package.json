@@ -12,5 +12,11 @@
     "ejs": "^3.1.6",
     "express": "^4.17.1",
     "nodemon": "^2.0.12"
+  },
+  "emmet.includeLanguages": {
+    "ejs": "html"
+  },
+ "[html]": {
+    "editor.defaultFormatter": "j69.ejs-beautify"
   }
 }
